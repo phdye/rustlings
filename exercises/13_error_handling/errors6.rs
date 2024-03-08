@@ -33,6 +33,7 @@ impl ParsePosNonzeroError {
 fn parse_pos_nonzero(s: &str) -> Result<PositiveNonzeroInteger, ParsePosNonzeroError> {
     // TODO: change this to return an appropriate error instead of panicking
     // when `parse()` returns an error.
+    // WAS: let x: i64 = s.parse().unwrap()
     let x: i64 = s.parse().unwrap_or_else(|error| {
         return ParsePosNonzeroError.from_parseint(error)
     });
