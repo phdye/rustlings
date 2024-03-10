@@ -13,4 +13,9 @@ fn main() {
     let n : usize = 2;
     let t = find_nth(&list, n);
     println!("{}", t);
+
+    let mut list_iter = list.iter();
+    while let Some(x) = list_iter.next() {
+        println!("{}", x);
+    }
 }
